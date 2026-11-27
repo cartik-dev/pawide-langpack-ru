@@ -1,0 +1,26 @@
+********* Start testing of TstFileOps *********
+Config: Using QtTest library 6.7.3, Qt 6.7.3 (x86_64-little_endian-llp64 shared (dynamic) release build; by MSVC 2019), windows server2022
+PASS   : TstFileOps::initTestCase()
+PASS   : TstFileOps::names(plain)
+PASS   : TstFileOps::names(dotfile)
+PASS   : TstFileOps::names(noext)
+PASS   : TstFileOps::names(unicode)
+PASS   : TstFileOps::names(spaces inside)
+PASS   : TstFileOps::names(empty)
+PASS   : TstFileOps::names(spaces only)
+PASS   : TstFileOps::names(slash)
+PASS   : TstFileOps::names(question)
+PASS   : TstFileOps::names(pipe)
+PASS   : TstFileOps::names(trailing space)
+PASS   : TstFileOps::names(com1)
+PASS   : TstFileOps::names(lpt1.txt)
+PASS   : TstFileOps::names(dot)
+PASS   : TstFileOps::names(too long)
+PASS   : TstFileOps::uniqueCopyNames()
+PASS   : TstFileOps::createAndRemove()
+PASS   : TstFileOps::copyRecursivelyIncludesHidden()
+PASS   : TstFileOps::copyIntoItselfRefused()
+PASS   : TstFileOps::renameRules()
+PASS   : TstFileOps::cleanupTestCase()
+Totals: 22 passed, 0 failed, 0 skipped, 0 blacklisted, 21ms
+********* Finished testing of TstFileOps *********

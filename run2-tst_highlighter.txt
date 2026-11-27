@@ -1,0 +1,10 @@
+********* Start testing of TstHighlighter *********
+Config: Using QtTest library 6.7.3, Qt 6.7.3 (x86_64-little_endian-llp64 shared (dynamic) release build; by MSVC 2019), windows server2022
+PASS   : TstHighlighter::initTestCase()
+PASS   : TstHighlighter::pythonKeywordsStringsComments()
+PASS   : TstHighlighter::jsonStringsAndNumbers()
+PASS   : TstHighlighter::blockCommentSpansBlocks()
+PASS   : TstHighlighter::languageSwitchRehighlights()
+PASS   : TstHighlighter::cleanupTestCase()
+Totals: 6 passed, 0 failed, 0 skipped, 0 blacklisted, 4ms
+********* Finished testing of TstHighlighter *********
