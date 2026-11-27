@@ -1,18 +1,20 @@
-name: Release
+name: CI
 
 on:
   push:
+    branches: [main]
     tags: ["v*"]
+  pull_request:
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
       - uses: actions/checkout@v4
 
-      # Compile the .ts source into a fresh .qm with the official Qt tooling.
+      # Verify the committed .ts source compiles into a fresh .qm with the
+      # official Qt tooling. Releases are created by the maintainer with the
+      # packaged zip (see README).
       - name: Install Qt tools
         run: pip install aqtinstall && python -m aqt install-qt linux desktop 6.7.3 linux_gcc_64 --tools-only -O "$HOME/Qt"
 
@@ -20,13 +22,5 @@ jobs:
         run: |
           LRELEASE=$(find "$HOME/Qt" -name lrelease -type f | head -1)
           "$LRELEASE" translations/pawide_ru.ts
-          cp translations/pawide_ru.qm .
-
-      - name: Package
-        run: zip -r "langpack-ru-${GITHUB_REF_NAME#v}.zip" plugin.json pawide_ru.qm README.md LICENSE install.sh install.bat translations/pawide_ru.ts
-
-      - name: Create release
-        uses: softprops/action-gh-release@v2
-        with:
-          files: langpack-ru-*.zip
-          body: "Официальный русский языковой пакет Paw IDE. Установка — см. README."
+          test -s pawide_ru.qm
+          echo "pawide_ru.qm is $(stat -c%s pawide_ru.qm) bytes"
