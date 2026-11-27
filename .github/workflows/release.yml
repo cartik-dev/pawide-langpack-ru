@@ -16,7 +16,7 @@ jobs:
       # official Qt tooling. Releases are created by the maintainer with the
       # packaged zip (see README).
       - name: Install Qt tools
-        run: pip install aqtinstall && python -m aqt install-qt linux desktop 6.7.3 linux_gcc_64 --tools-only -O "$HOME/Qt"
+        run: pip install aqtinstall && python -m aqt install-qt linux desktop 6.7.3 gcc_64 --outputdir "$HOME/Qt"
 
       - name: Compile translations
         run: |
