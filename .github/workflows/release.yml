@@ -1,0 +1,32 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      # Compile the .ts source into a fresh .qm with the official Qt tooling.
+      - name: Install Qt tools
+        run: pip install aqtinstall && python -m aqt install-qt linux desktop 6.7.3 linux_gcc_64 --tools-only -O "$HOME/Qt"
+
+      - name: Compile translations
+        run: |
+          LRELEASE=$(find "$HOME/Qt" -name lrelease -type f | head -1)
+          "$LRELEASE" translations/pawide_ru.ts
+          cp translations/pawide_ru.qm .
+
+      - name: Package
+        run: zip -r "langpack-ru-${GITHUB_REF_NAME#v}.zip" plugin.json pawide_ru.qm README.md LICENSE install.sh install.bat translations/pawide_ru.ts
+
+      - name: Create release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: langpack-ru-*.zip
+          body: "Официальный русский языковой пакет Paw IDE. Установка — см. README."
