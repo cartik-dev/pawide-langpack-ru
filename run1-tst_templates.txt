@@ -1,0 +1,24 @@
+********* Start testing of TstTemplates *********
+Config: Using QtTest library 6.7.3, Qt 6.7.3 (x86_64-little_endian-llp64 shared (dynamic) release build; by MSVC 2019), windows server2022
+PASS   : TstTemplates::initTestCase()
+PASS   : TstTemplates::allTemplatesCreateRealFiles(empty)
+PASS   : TstTemplates::allTemplatesCreateRealFiles(cpp)
+PASS   : TstTemplates::allTemplatesCreateRealFiles(python)
+PASS   : TstTemplates::allTemplatesCreateRealFiles(web)
+PASS   : TstTemplates::allTemplatesCreateRealFiles(rust)
+PASS   : TstTemplates::allTemplatesCreateRealFiles(lua)
+PASS   : TstTemplates::placeholdersAreSubstituted()
+PASS   : TstTemplates::invalidNamesRejected(empty)
+PASS   : TstTemplates::invalidNamesRejected(slash)
+PASS   : TstTemplates::invalidNamesRejected(backslash)
+PASS   : TstTemplates::invalidNamesRejected(colon)
+PASS   : TstTemplates::invalidNamesRejected(reserved)
+PASS   : TstTemplates::invalidNamesRejected(reserved-ext)
+PASS   : TstTemplates::invalidNamesRejected(trailing-dot)
+PASS   : TstTemplates::invalidNamesRejected(dotdot)
+PASS   : TstTemplates::invalidNamesRejected(star)
+PASS   : TstTemplates::existingFolderHandling()
+PASS   : TstTemplates::unknownTemplateAndBadLocation()
+PASS   : TstTemplates::cleanupTestCase()
+Totals: 20 passed, 0 failed, 0 skipped, 0 blacklisted, 64ms
+********* Finished testing of TstTemplates *********

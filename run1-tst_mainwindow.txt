@@ -1,0 +1,29 @@
+********* Start testing of TstMainWindow *********
+Config: Using QtTest library 6.7.3, Qt 6.7.3 (x86_64-little_endian-llp64 shared (dynamic) release build; by MSVC 2019), windows server2022
+PASS   : TstMainWindow::initTestCase()
+QWARN  : TstMainWindow::appStartsWithWelcomeScreen() QFontDatabase: Cannot find font directory D:/a/pawide-langpack-ru/Qt/6.7.3/msvc2019_64/lib/fonts.
+Note that Qt no longer ships fonts. Deploy some (from https://dejavu-fonts.github.io/ for example) or switch to fontconfig.
+PASS   : TstMainWindow::appStartsWithWelcomeScreen()
+PASS   : TstMainWindow::openFolderShowsNestedAndHiddenFiles()
+PASS   : TstMainWindow::hiddenFilesCanBeToggled()
+PASS   : TstMainWindow::openEditAndSavePreservesEncodingAndLineEndings()
+PASS   : TstMainWindow::sameFileIsOpenedOnlyOnce()
+PASS   : TstMainWindow::hiddenAndExtensionlessFilesOpenAsText()
+QWARN  : TstMainWindow::unsavedChangesBlockProjectClose() This plugin does not support propagateSizeHints()
+QWARN  : TstMainWindow::unsavedChangesBlockProjectClose() This plugin does not support propagateSizeHints()
+PASS   : TstMainWindow::unsavedChangesBlockProjectClose()
+PASS   : TstMainWindow::newProjectFromTemplateOpensAndIsRemembered()
+QWARN  : TstMainWindow::invalidFolderIsRejected() This plugin does not support propagateSizeHints()
+PASS   : TstMainWindow::invalidFolderIsRejected()
+QWARN  : TstMainWindow::sameProjectIsNotOpenedInTwoWindows() This plugin does not support raise()
+PASS   : TstMainWindow::sameProjectIsNotOpenedInTwoWindows()
+PASS   : TstMainWindow::explorerOperations()
+PASS   : TstMainWindow::editorTypingBehaviour()
+QWARN  : TstMainWindow::commandPalette() This plugin does not support propagateSizeHints()
+QWARN  : TstMainWindow::commandPalette() This plugin does not support raise()
+QWARN  : TstMainWindow::commandPalette() This plugin does not support grabbing the keyboard
+PASS   : TstMainWindow::commandPalette()
+PASS   : TstMainWindow::recentProjectsSurviveButFoldersAreNotDeleted()
+PASS   : TstMainWindow::cleanupTestCase()
+Totals: 16 passed, 0 failed, 0 skipped, 0 blacklisted, 1964ms
+********* Finished testing of TstMainWindow *********

@@ -1,0 +1,23 @@
+Test project D:/a/pawide-langpack-ru/pawide-langpack-ru/build
+    Start 1: tst_fileutils
+1/6 Test #1: tst_fileutils ....................   Passed    0.08 sec
+    Start 2: tst_templates
+2/6 Test #2: tst_templates ....................   Passed    0.10 sec
+    Start 3: tst_database
+3/6 Test #3: tst_database .....................   Passed    0.17 sec
+    Start 4: tst_fileops
+4/6 Test #4: tst_fileops ......................   Passed    0.05 sec
+    Start 5: tst_mainwindow
+5/6 Test #5: tst_mainwindow ...................   Passed    2.00 sec
+    Start 6: tst_highlighter
+6/6 Test #6: tst_highlighter ..................   Passed    0.05 sec
+
+100% tests passed out of 6
+
+Total Test time (real) =   2.48 sec
+tst_database exit code: 0
+tst_fileops exit code: 0
+tst_fileutils exit code: 0
+tst_highlighter exit code: 0
+tst_mainwindow exit code: 0
+tst_templates exit code: 0
