@@ -15,12 +15,13 @@ jobs:
       # Verify the committed .ts source compiles into a fresh .qm with the
       # official Qt tooling. Releases are created by the maintainer with the
       # packaged zip (see README).
-      - name: Install Qt tools
-        run: pip install aqtinstall && python -m aqt install-qt linux desktop 6.7.3 gcc_64 --outputdir "$HOME/Qt"
+      - name: Install lrelease
+        run: sudo apt-get update && sudo apt-get install -y qt6-l10n-tools
 
       - name: Compile translations
         run: |
-          LRELEASE=$(find "$HOME/Qt" -name lrelease -type f | head -1)
+          LRELEASE=$(find /usr -name lrelease -type f | head -1)
+          echo "using $LRELEASE"
           "$LRELEASE" translations/pawide_ru.ts
           test -s pawide_ru.qm
           echo "pawide_ru.qm is $(stat -c%s pawide_ru.qm) bytes"
