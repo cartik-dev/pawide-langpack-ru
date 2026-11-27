@@ -6,7 +6,7 @@
   "author": "paw-labs",
   "description": "Localises every menu, dialog and message of Paw IDE into Russian.",
   "entry": "pawide_ru.qm",
-  "minAppVersion": "1.2.1",
+  "minAppVersion": "1.2.0",
   "license": "MIT",
   "homepage": "https://github.com/cartik-dev/pawide-langpack-ru"
 }
